@@ -7,7 +7,7 @@ import ModalPut from "./components/ModalPut";
 import ModalDelete from "./components/ModalDelete";
 
 function App() {
-  const baseUrl = "http://127.0.0.1:8000/api/people/";
+  const baseUrl = process.env.REACT_APP_BASE_URL;
   const [data, setData] = useState([]);
   const [modalPost, setModalPost] = useState(false);
   const [modalPut, setModalPut] = useState(false);
@@ -50,7 +50,8 @@ function App() {
 
   useEffect(() => {
     requestGet();
-  }, []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[]);
 
   const requestPost = async () => {
     try {
