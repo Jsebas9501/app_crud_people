@@ -7,7 +7,7 @@ import ModalPut from "./components/ModalPut";
 import ModalDelete from "./components/ModalDelete";
 
 function App() {
-  const baseUrl = process.env.REACT_APP_BASE_URL;
+  const baseUrl = "https://pruebatecnica-enersic.onrender.com/api/people/";
   const [data, setData] = useState([]);
   const [modalPost, setModalPost] = useState(false);
   const [modalPut, setModalPut] = useState(false);
